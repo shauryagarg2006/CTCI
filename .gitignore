@@ -1,5 +1,7 @@
 *.class
-
+*.project
+*.classpath
+src/ctci/prac/main/*
 # Mobile Tools for Java (J2ME)
 .mtj.tmp/
 
