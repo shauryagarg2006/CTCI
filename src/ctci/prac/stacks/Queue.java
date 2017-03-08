@@ -1,6 +1,6 @@
 package ctci.prac.stacks;
 
-public class Queue<T extends Comparable<T>> {
+public class Queue<T> {
 	Node<T> head;
 	Node<T> tail;
 
@@ -28,6 +28,10 @@ public class Queue<T extends Comparable<T>> {
 			tail.next = temp;
 			tail = temp;
 		}
+	}
+
+	public boolean isEmpty() {
+		return head == null ? true : false;
 	}
 
 	public T dequeue() {

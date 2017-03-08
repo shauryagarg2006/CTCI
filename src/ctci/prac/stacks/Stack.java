@@ -1,6 +1,6 @@
 package ctci.prac.stacks;
 
-public class Stack<T extends Comparable<T>> {
+public class Stack<T> {
 	Node<T> head;
 
 	private static class Node<T> {
@@ -27,7 +27,7 @@ public class Stack<T extends Comparable<T>> {
 		}
 	}
 
-	public T remove() {
+	public T pop() {
 		T result;
 		if (head == null) {
 			throw new NullPointerException();
@@ -43,6 +43,14 @@ public class Stack<T extends Comparable<T>> {
 			throw new NullPointerException();
 		} else {
 			return head.data;
+		}
+	}
+
+	public boolean isEmpty() {
+		if (head == null) {
+			return true;
+		} else {
+			return false;
 		}
 	}
 
